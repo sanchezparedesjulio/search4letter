@@ -137,6 +137,7 @@ def view_the_log() -> 'str':
                            the_row_titles=("Phrase", " Letters", " Remote_addr", "User_agent", "Results"),
                            the_data=contents)
 
+
 @app.route("/logout")
 @login_required
 def logout():

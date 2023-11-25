@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h2>{{ the_title }}</h2>
+
+<p>You submitted the following data:</p>
+<table>
+    <tr><td>Phrase:</td><td>{{ the_phrase }}</td></tr>
+    <tr><td>Letters:</td><td>{{ the_letters }}</td></tr>
+</table>
+
+<p>When "{{ the_phrase }}" is search for "{{ the_letters }}", 
+    the following results are founded:</p>
+<h3>{{ the_results }}</h3>
+
+<!-- botón para redirigir a la página que desees -->
+<a href="{{ url_for('entry_page') }}" class="btn btn-primary">entry</a>
+<br>
+<a href="{{ url_for('view_the_log') }}" class="btn btn-primary">viewlog</a>
+<br>
+<a href="{{ url_for('logout') }}" class="btn btn-primary">logout</a>
+{% endblock %}

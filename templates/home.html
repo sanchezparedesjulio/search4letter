@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block body %}
+<h2>Home</h2>
+{% if current_user.is_authenticated %}
+        <h1>You are logged in</h1>
+        <a href="/entry">Search for letters in a phrase</a><br>
+        <a href="/viewlog">View log</a><br>
+        <a href="/logout">Logout</a><br>
+{% else %}
+<h1>You are not logged in:</h1>
+<nav>
+    <ul>
+        <li><a href="/login">Login</a></li>
+        <li><a href="/register">Create account</a></li>
+    </ul>
+</nav>
+{% endif %}
+{% endblock %}

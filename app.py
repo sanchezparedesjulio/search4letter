@@ -94,7 +94,7 @@ def login():
         except:
             return render_template("login.html")
     return render_template("login.html")
-
+    #New Feature: custom page for failed in autentication
 
 @app.route("/")
 def home():
@@ -136,6 +136,7 @@ def view_the_log() -> 'str':
                            the_title='View Log',
                            the_row_titles=("Phrase", " Letters", " Remote_addr", "User_agent", "Results"),
                            the_data=contents)
+
 
 @app.route("/logout")
 @login_required
